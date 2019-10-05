@@ -109,12 +109,14 @@ public class AFD {
         System.out.print("Introduzca la cantidad de estados: ");
         int estados = input.nextInt();
         
+        // Acepta las entradas del usuario hasta que entre un valor menor a 0
         System.out.print("Introduzca los estados finales: ");
         Set<Integer> aceptado = new TreeSet<>();
         while((num = input.nextInt()) > -1){
             aceptado.add(num);
         }
          
+        // Para terminar de introducir las cadenas a validar, basta con usar ~
         AFD automata = new AFD(alfabeto, estados, aceptado);
         System.out.print("Introduzca la cadena: ");
         String cadena; 
